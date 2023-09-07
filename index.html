@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="navbar__brand">
+                <img src="logo.svg" alt="The Weekend Logo"> Weekend
+            </div>
+            <ul class="navbar__navigation">
+                <li class="navbar__navigation-item">
+                    <a href="#" class="navbar__link">Data</a>
+                </li>
+                <li class="navbar__navigation-item">
+                    <a href="#" class="navbar__link">About</a>
+                </li>
+            </ul>
+        </header>
+
+        <main>
+            <section>
+                <h1> Add new interest </h1>
+                <form action="/entry">
+                    <label for="interest_input">Describe interest:</label>
+                    <input type="text" name="interest_input" id="interest_input">
+                </form>
+            </section>
+
+            <section>
+                <h1> All Interests </h1>
+                <article>
+                    This is an article.
+                </article>
+                <article>
+                    This is another article.
+                </article>
+            </section>
+        </main>
+
+        <footer>
+        </footer>
+    </body>
 </html>
