@@ -11,6 +11,7 @@
    sodipodi:docname="logo.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -25,7 +26,7 @@
      inkscape:document-units="mm"
      inkscape:zoom="0.2102413"
      inkscape:cx="397.16269"
-     inkscape:cy="549.36874"
+     inkscape:cy="549.36875"
      inkscape:window-width="1280"
      inkscape:window-height="648"
      inkscape:window-x="0"
@@ -33,17 +34,55 @@
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
-     id="defs1" />
+     id="defs1">
+    <linearGradient
+       id="linearGradient4"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#000080;stop-opacity:1;"
+         offset="0.03846153"
+         id="stop4" />
+      <stop
+         style="stop-color:#000080;stop-opacity:0;"
+         offset="1"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4"
+       id="linearGradient5"
+       x1="74.249992"
+       y1="151.64618"
+       x2="137.17372"
+       y2="151.64618"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(2.5169492,-6.2923729)" />
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#787e7d;fill-opacity:1;stroke-width:0.264583"
+       style="fill:#000080;stroke-width:0.264583"
+       id="rect2"
+       width="213.94067"
+       height="302.03391"
+       x="1.2584802"
+       y="1.2584743"
+       ry="2.5169492" />
+    <rect
+       style="fill:#a90000;fill-opacity:1;stroke-width:0.264583"
        id="rect1"
        width="109.48728"
        height="176.18645"
-       x="51.597454"
-       y="64.182198" />
+       x="52.855923"
+       y="61.665245" />
+    <rect
+       style="fill:url(#linearGradient5);stroke-width:0.264583"
+       id="rect3"
+       width="62.923729"
+       height="104.45338"
+       x="76.766945"
+       y="93.127121" />
   </g>
 </svg>

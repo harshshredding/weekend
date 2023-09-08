@@ -2,14 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Weekend</title>
+        <link rel="stylesheet" href="styles.css"/>
     </head>
 
     <body>
         <header class="navbar">
-            <div class="navbar__brand">
-                <img src="logo.svg" alt="The Weekend Logo"> Weekend
-            </div>
+            <img src="logo.svg" alt="The Weekend Logo" class="logo">
             <ul class="navbar__navigation">
                 <li class="navbar__navigation-item">
                     <a href="#" class="navbar__link">Data</a>
@@ -20,14 +19,14 @@
             </ul>
         </header>
 
-        <main>
+        <main class="main">
             <section>
                 <h1> Add new interest </h1>
-                <form action="/entry">
-                    <label for="interest_input">Describe interest:</label>
-                    <input type="text" name="interest_input" id="interest_input">
+                <form action="/entry" method="POST" class="form">
+                    <label for="interest_input" class="form__label">Describe interest:</label>
+                    <textarea name="interest_input" id="interest_input" class="form_textarea"></textarea>
+                    <button type="submit" class="form_button">Add Interest</button> 
                 </form>
-
             </section>
 
             <section>
@@ -41,7 +40,17 @@
             </section>
         </main>
 
-        <footer>
+        <footer class="footer">
+            <div class="footer__content">
+                <div>
+                    <a href="#">About</a>
+                    <a href="#">Data</a>
+                </div>
+                <div>
+                    <a href="#">Contact</a>
+                    <a href="#">Carreer</a>
+                </div>
+            </div>
         </footer>
     </body>
 </html>

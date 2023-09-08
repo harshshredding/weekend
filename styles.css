@@ -1,0 +1,22 @@
+.navbar {
+    max-width: 640px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.main {
+    max-width: 640px;
+    margin: 8px auto;
+}
+
+.footer {
+    max-width: 640px;
+    margin: 8px auto;
+}
