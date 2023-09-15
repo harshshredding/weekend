@@ -23,6 +23,11 @@ body {
     width: 50px;
 }
 
+.logo_text {
+    height: 50px;
+    width: 120px;
+}
+
 .brand {
     display: flex;
     align-items: center;
