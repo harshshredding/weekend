@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Weekend</title>
+        <link rel="stylesheet" href="/static/css/styles.css"/>
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="brand">
+                <img src="/static/logo.svg" alt="The Weekend Logo" class="logo">
+                WeekEnd
+            </div>
+            <ul class="navbar__navigation">
+                <li class="navbar__navigation-item">
+                    <a href="#" class="navbar__link">Predict</a>
+                </li>
+                <li class="navbar__navigation-item">
+                    <a href="#" class="navbar__link">Add Data</a>
+                </li>
+                <li class="navbar__navigation-item">
+                    <a href="#" class="navbar__link">About</a>
+                </li>
+            </ul>
+        </header>
+
+        <main class="main">
+            <section>
+                <h1> Add new interest </h1>
+                <form action="/create" method="POST" class="form">
+                    <label for="interest_input" class="form__label">Describe interest:</label>
+                    <textarea name="interest_input" id="interest_input" class="form__textarea"></textarea>
+                    <button type="submit" class="form__button">Add Interest</button> 
+                </form>
+            </section>
+
+            <section class="interest_list">
+                <h1> All Interests </h1>
+                {% for interest in interest_list: %} 
+                <article class="interest_entry">
+                    {{interest["text"]}}
+                </article>
+                {% endfor %} 
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__content__section">
+                    <a href="#" class="footer__link">About</a>
+                    <a href="#" class="footer__link">Data</a>
+                </div>
+                <div class="footer__content__section">
+                    <a href="#" class="footer__link">Contact</a>
+                    <a href="#" class="footer__link">Career</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

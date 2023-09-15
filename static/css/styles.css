@@ -1,0 +1,89 @@
+html {
+    font-family: Lato, sans-serif;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.navbar {
+    max-width: 640px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    max-width: 640px;
+    margin: 8px auto;
+}
+
+
+.navbar__navigation {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar__navigation-item {
+    margin-left: 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form__textarea {
+    width: 100%;
+    padding: 12px 12px;
+}
+
+.form__button {
+    margin-top: 20px;
+}
+
+.interest_entry {
+    margin-top: 12px;
+    background-color: #75babf;
+}
+
+.footer {
+    background-color: #323f43;
+    margin-top: 50px;
+    padding: 40px 0px;
+}
+
+.footer__link {
+    color: white;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footer__content__section {
+    display: flex;
+    flex-direction: column;
+}
