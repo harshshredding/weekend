@@ -1,5 +1,9 @@
 import openai
-api_key = "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"
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API")
 openai.api_key = api_key
 
 def get_recommendation(experiences: list[str]) -> str:
