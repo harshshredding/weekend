@@ -50,6 +50,14 @@ body {
     margin-left: 30px;
 }
 
+.navbar__link {
+    text-decoration: none;
+}
+
+.navbar__link__active {
+    color: #636b99;
+}
+
 .form {
     display: flex;
     flex-direction: column;
