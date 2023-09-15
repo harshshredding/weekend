@@ -100,3 +100,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.wrap-and-keep-newlines {
+    white-space: pre-wrap;
+    word-wrap: break-word; /* Ensures that long strings/words will break and wrap onto the next line */
+}

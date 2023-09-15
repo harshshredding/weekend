@@ -3,6 +3,7 @@ import datetime
 from pymongo import MongoClient
 import os
 from dotenv import load_dotenv
+from gpt.recommendation import get_recommendation
 
 load_dotenv()
 
@@ -26,8 +27,11 @@ def create_app():
         all_interests = [interest for interest in app.db.interests.find({})]
         return render_template("create.html", interest_list=all_interests)
 
-    @app.route("/hello")
-    def hello():
-        return render_template("hello.html")
+    @app.route("/")
+    def recommend(): 
+        all_interests = [interest['text'] for interest in app.db.interests.find({})]
+        recommendation = get_recommendation(all_interests)
+        recommendation = recommendation.strip()
+        return render_template("recommend.html", recommendation=recommendation)
 
     return app
