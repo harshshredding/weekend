@@ -1,5 +1,5 @@
 import openai
-api_key = "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"
+api_key = "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"
 openai.api_key = api_key
 
 def get_recommendation(experiences: list[str]) -> str:
