@@ -1,0 +1,40 @@
+{% from "nav.jinja2" import navigation_items %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Weekend</title>
+        <link rel="stylesheet" href="/static/css/styles.css"/>
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="brand">
+                <img src="/static/logo.svg" alt="The Weekend Logo" class="logo">
+                <img src="/static/WeekEnd-Text.png" alt="The Weekend Logo Text" class="logo_text">
+            </div>
+            <ul class="navbar__navigation">
+                {{ navigation_items() }}
+            </ul>
+        </header>
+
+        <main class="main">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__content__section">
+                    <a href="#" class="footer__link">About</a>
+                    <a href="#" class="footer__link">Data</a>
+                </div>
+                <div class="footer__content__section">
+                    <a href="#" class="footer__link">Contact</a>
+                    <a href="#" class="footer__link">Career</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -34,4 +34,9 @@ def create_app():
         recommendation = recommendation.strip()
         return render_template("recommend.html", recommendation=recommendation)
 
+
+    @app.route("/hello")
+    def hello(): 
+        return render_template("hello.html")
+
     return app
