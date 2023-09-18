@@ -15,7 +15,15 @@
                 <img src="/static/WeekEnd-Text.png" alt="The Weekend Logo Text" class="logo_text">
             </div>
             <ul class="navbar__navigation">
-                {{ navigation_items() }}
+                <li class="navbar__navigation-item"> 
+                    <a href="{{ url_for('recommend') }}" class="navbar__link">Recommend</a>
+                </li>
+                <li class="navbar__navigation-item">
+                    <a href="{{ url_for('create_interest') }}" class="navbar__link">Add Data</a>
+                </li>
+                <li class="navbar__navigation-item">
+                    <a href="{{ url_for('info') }}" class="navbar__link">About</a>
+                </li>
             </ul>
         </header>
 

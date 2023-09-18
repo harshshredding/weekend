@@ -35,8 +35,8 @@ def create_app():
         return render_template("recommend.html", recommendation=recommendation)
 
 
-    @app.route("/hello")
-    def hello(): 
-        return render_template("hello.html")
+    @app.route("/about")
+    def info(): 
+        return render_template("about.html")
 
     return app
