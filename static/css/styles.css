@@ -109,3 +109,7 @@ body {
 .about__text {
     padding: 20px;
 }
+
+.recommend__form__input {
+    margin-top: 8px;
+}

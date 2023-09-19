@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class>
+    <h1> Get Recommendation </h1>
+    <form action="/show-recommendation" method="POST" class="form">
+        <label for="city" class="form__label">Specify the City you live in:</label>
+        <input name="city" id="city_input" class="recommend__form__input">
+        <button type="submit" class="form__button">Get Recommendation</button> 
+    </form>
+</div>
+{% endblock %}

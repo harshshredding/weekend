@@ -27,8 +27,9 @@ def create_app():
     @app.route("/create",  methods=['GET','POST'])
     def create_interest():
         username = is_logged_in()
-        if not username:
-           return render_template("unauthorized.html") 
+        if not username: 
+            flash("Unauthorized")
+            return redirect(url_for('login'))
 
         if request.method == 'POST':
             interest_data = request.form.get("interest_input")
@@ -41,17 +42,28 @@ def create_app():
         all_interests = get_all_interests(username) 
         return render_template("create.html", interest_list=all_interests)
 
-    @app.route("/")
-    def recommend():
-        username = is_logged_in()
-        if not username:
-           return render_template("unauthorized.html") 
 
+    @app.route("/get-recommendation/")
+    def create_recommendation():
+        username = is_logged_in()
+        if not username: 
+            flash("Unauthorized")
+            return redirect(url_for('login')) 
+        return render_template("get_recommendation.html")  
+
+    @app.route("/show-recommendation/", methods=['POST'])
+    def show_recommendation():
+        username = is_logged_in()
+        if not username: 
+            flash("Unauthorized")
+            return redirect(url_for('login'))
+
+        city = request.form["city"]
         all_interests = get_all_interests(username) 
         all_interests = [interest['text'] for interest in all_interests]
-        recommendation = get_recommendation(all_interests)
+        recommendation = get_recommendation(all_interests, city=city)
         recommendation = recommendation.strip()
-        return render_template("recommend.html", recommendation=recommendation)
+        return render_template("show_recommendation.html", recommendation=recommendation)
 
     @app.route("/about")
     def info(): 
@@ -60,8 +72,9 @@ def create_app():
     @app.route("/profile")
     def profile():
         username = is_logged_in()
-        if not username:
-           return render_template("unauthorized.html") 
+        if not username: 
+            flash("Unauthorized")
+            return redirect(url_for('login'))
         return render_template("profile.html", username=username)
 
 
