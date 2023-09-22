@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-    max-width: 640px;
+    max-width: 80%;
     margin: 0px auto;
     display: flex;
     flex-direction: row;
@@ -34,7 +34,7 @@ body {
 }
 
 .main {
-    max-width: 640px;
+    max-width: 80%;
     margin: 8px auto;
 }
 
@@ -69,8 +69,18 @@ body {
     padding: 12px 12px;
 }
 
+.form__recommendation__textarea {
+    width: 100%;
+    padding: 12px 12px;
+    margin-top: 12px;
+}
+
 .form__button {
     margin-top: 20px;
+}
+
+.form__label {
+    margin-top: 12px;
 }
 
 .interest_entry {

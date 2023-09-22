@@ -59,9 +59,12 @@ def create_app():
             return redirect(url_for('login'))
 
         city = request.form["city"]
+        additional = request.form["additional-info"]
+
         all_interests = get_all_interests(username) 
         all_interests = [interest['text'] for interest in all_interests]
-        recommendation = get_recommendation(all_interests, city=city)
+
+        recommendation = get_recommendation(all_interests, city=city, additional=additional)
         recommendation = recommendation.strip()
         return render_template("show_recommendation.html", recommendation=recommendation)
 
