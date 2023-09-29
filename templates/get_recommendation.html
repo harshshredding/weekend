@@ -1,14 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class>
+<div id="loading">
+</div>
+<div id="content">
     <h1> Get Recommendation </h1>
     <form action="/show-recommendation" method="POST" class="form">
         <label for="city" class="form__label">Specify the City you live in:</label>
         <input name="city" id="city_input" class="recommend__form__input">
         <label for="additional-info" class="form__label">Any other preference:</label>
         <textarea name="additional-info" id="additional_info_input" class="form__recommendation__textarea"></textarea>
-        <button type="submit" class="form__button">Get Recommendation</button> 
+        <button onclick="loading()" type="submit" class="form__button">Get Recommendation</button> 
     </form>
 </div>
+
+
+<script>
+    function loading() {
+        var content_element = document.getElementById('content');  
+        content_element.style.display = 'none';
+
+        var loading_element = document.getElementById('loading');  
+        loading_element.style.display = 'block';
+    }
+</script>
 {% endblock %}

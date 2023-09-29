@@ -184,3 +184,14 @@ body {
 .user_profile__container {
     padding: 16px;
 }
+
+#loading {
+    width: 200px;
+    height: 200px; 
+    margin: 8px auto;
+    background-image: url('/static/spinner.gif');
+    display: none;
+    cursor: wait;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
