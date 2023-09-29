@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class>
+<div class="register__content">
     <h1> Sign Up </h1>
     <form action="/register" method="POST" class="form">
-        <label for="username" class="form__label">Create Username:</label>
-        <input name="username" id="username_input" class="login__form__input">
-        <button type="submit" class="form__button">Register</button> 
+        <label for="username" class="register__form__label">Create Username:</label>
+        <input name="username" id="username_input" class="register__form__input">
+        <button type="submit" class="register__form__button">Register</button> 
         {% if user_already_exists %}
             <p style="color: red;">User already exists!</p>
         {% endif %}

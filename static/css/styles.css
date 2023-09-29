@@ -151,3 +151,36 @@ body {
     cursor: pointer;
     transition: background 0.3s ease;
 }
+
+
+.register__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.register__form__input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.register__form__label {
+    margin-bottom: 8px;
+}
+
+.register__form__button {
+    padding: 10px;
+    background-color: #323f43;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user_profile__container {
+    padding: 16px;
+}
