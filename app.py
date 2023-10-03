@@ -1,10 +1,11 @@
-from flask import Flask, flash, redirect, render_template, request, abort, session, url_for
+from flask import Flask, flash, json, jsonify, redirect, render_template, request, abort, session, url_for
 import datetime
 from pymongo import MongoClient
 import os
 from dotenv import load_dotenv
 from werkzeug.user_agent import UserAgent
 from gpt.recommendation import get_recommendation
+from gpt.util import get_reply
 
 load_dotenv()
 
@@ -117,5 +118,18 @@ def create_app():
         # Redirect to another page, maybe the homepage or the login page
         flash("Log out successful!")
         return redirect(url_for('login'))
+    
+    @app.route('/chat', methods=['POST'])
+    def chat():
+        if request.is_json:
+            data: dict = request.json
+            if "query" in data:
+                chat_gpt_query = data["query"]
+                chatgpt_reply = get_reply(query=chat_gpt_query)
+                return jsonify({"reply": chatgpt_reply}), 200
+            else:
+                return jsonify({"error", "JSON doesn't have message"}), 400
+        else:
+            return jsonify({"error", "Invalid JSON"}), 400
 
     return app
