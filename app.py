@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 from werkzeug.user_agent import UserAgent
 from gpt.recommendation import get_recommendation
-from gpt.util import get_reply
+from gpt.util import get_reply, get_reply_multiple_messages
 
 load_dotenv()
 
@@ -129,6 +129,27 @@ def create_app():
                 return jsonify({"reply": chatgpt_reply}), 200
             else:
                 return jsonify({"error", "JSON doesn't have message"}), 400
+        else:
+            return jsonify({"error", "Invalid JSON"}), 400
+
+
+    def check_chat_messages(messages: list[dict]):
+        print(messages)
+        assert len(messages)%2 == 1
+        for i, message in enumerate(messages):
+            if (i%2) == 0:
+                assert message["type"] == "request"
+            else:
+                assert message["type"] == "response"
+
+
+    @app.route('/chat-multiple-messages', methods=['POST'])
+    def chat_multiple_messages():
+        if request.is_json:
+            messages: list[dict] = request.json
+            check_chat_messages(messages)
+            chatgpt_reply = get_reply_multiple_messages(messages=messages)
+            return jsonify({"reply": chatgpt_reply}), 200
         else:
             return jsonify({"error", "Invalid JSON"}), 400
 
